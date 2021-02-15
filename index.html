@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 7</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="background">
+				<span>back</span>ground
+			</div>
+			<div class="menu">
+				<a href="#color" class="menu__link">color</a>
+				<a href="#image" class="menu__link">image</a>
+				<a href="#repeat" class="menu__link">repeat</a>
+				<a href="#position" class="menu__link">position</a>
+				<a href="#attachment" class="menu__link">attachment</a>
+				<a id="violet" href="#size" class="menu__link">size</a>
+
+			</div>
+		</header>
+		<main class="main">
+			<div class="text">
+				<h1>CSS свойство - background</h1>
+				<h3>Background Управляет фоном элемента</h3>
+				<p>Это универсальное CSS свойство позволяет одновременно задать несколько параметров фона, а именно
+					определить цвет, установить фоновое изображение, задать начальное положение фонового изображения,
+					определить как будет повторяться фоновое изображение, установить будет ли прокручиваться фоновое
+					изображение вместе с содержимым и масштабировать фоновое изображение согласно заданным размерам.
+					Так же
+					значением свойства background может быть указана градиентная заливка фона.</p>
+			</div>
+			<div class="color" id="color">
+				<h3><mark>Background-color</mark> - определяет цвет фона элемента</h3>
+				<h4>ПО УМОЛЧАНИЮ(ПРОЗРАЧНЫЙ)
+				</h4>
+				.block{background: transparent;}
+				<div class="block"></div>
+				<h4>ЦВЕТНОЙ</h4>
+				.block{ background: red;}
+				<div class="block red"></div>
+				<h4>ЦВЕТНОЙ(RGBA, ПРОЗРАЧНОСТЬ 50%)
+				</h4>
+				.block{ background: rgba(86, 255, 80,0.644) }
+
+				<div class="block rgba"></div>
+
+
+			</div>
+			<div class="image" id="image">
+				<h3><mark>Background-image</mark> - устанавливает фоновое изображение для элемента либо задает градиентную
+					заливку
+				</h3>
+				<h4>КАРТИНКА</h4>
+				.block
+				<hr>{background: url("../img/img/")}
+				<div class="block border basket">
+
+				</div>
+				<h4>РАДИАЛЬНЫЙ ГРАДИЕНТ
+				</h4>
+				.block
+				<hr>{background: radial-gradient(circle, rgba)}
+				<div class="block border rad-grad"></div>
+				<h4>ЛИНЕЙНЫЙ ГРАДИЕНТ
+				</h4>
+				.block
+				<hr>{background:
+				linear-gradient()}
+				<div class="block border line-grad"></div>
+			</div>
+			<div class="repeat" id="repeat">
+				<h3><mark>Background-repeat</mark> - определяет, как будет повторяться фоновое изображение
+				</h3>
+				<h4>ПО УМОЛЧАНИЮ. ФОНОВОЕ ИЗОБРАЖЕНИЕ ПОВТОРЯЕТСЯ ПО ГОРИЗОНТАЛИ И ВЕРТИКАЛИ.
+				</h4>
+				.block{background:url() repeat;}
+				<div class="block repeat__image border__second"></div>
+				<h4>NO-REPEAT. УСТАНАВЛИВАЕТ ОДНО ФОНОВОЕ ИЗОБРАЖЕНИЕ В ЭЛЕМЕНТЕ БЕЗ ЕГО ПОВТОРЕНИЙ
+				</h4>
+				.block{background:url() no-repeat;}
+				<div class="block border__second no-repeat "></div>
+
+				<h4>REPEAT-X. ФОНОВЫЙ РИСУНОК ПОВТОРЯЕТСЯ ТОЛЬКО ПО ГОРИЗОНТАЛИ.
+				</h4>
+				.block{background:url() repeat-x;}
+				<div class="block border__second repeat-x "></div>
+				<h4>REPEAT-Y. ФОНОВЫЙ РИСУНОК ПОВТОРЯЕТСЯ ТОЛЬКО ПО ВЕРТИКАЛИ.
+				</h4>
+				.block{background:url() repeat-y;}
+
+				<div class="block border__second repeat-y "></div>
+				<h4>SPACE. ИЗОБРАЖЕНИЕ ПОВТОРЯЕТСЯ СТОЛЬКО РАЗ, ЧТОБЫ ПОЛНОСТЬЮ ЗАПОЛНИТЬ ОБЛАСТЬ; ЕСЛИ ЭТО НЕ УДАЁТСЯ,
+					МЕЖДУ
+					КАРТИНКАМИ ДОБАВЛЯЕТСЯ ПУСТОЕ ПРОСТРАНСТВО.
+				</h4>
+				.block{background:url() space;}
+
+				<div class="block space border__second"></div>
+				<h4>ROUND. ИЗОБРАЖЕНИЕ ПОВТОРЯЕТСЯ ТАК, ЧТОБЫ В ОБЛАСТИ ПОМЕСТИЛОСЬ ЦЕЛОЕ ЧИСЛО РИСУНКОВ; ЕСЛИ ЭТО НЕ
+					УДАЁТСЯ
+					СДЕЛАТЬ, ТО ФОНОВЫЕ РИСУНКИ МАСШТАБИРУЮТСЯ.
+				</h4>
+				.block{background:url() round;}
+
+				<div class="block round border__second"></div>
+			</div>
+			<div class="position" id="position">
+				<h3> <mark>Background-position</mark> - задает начальное положение фонового изображения, где первое значение
+					(проценты, px, слово) определяет расположение по горизонтали, второе - вертикали.
+				</h3>
+				<h4>ПО УМОЛЧАНИЮ
+				</h4>
+				.block{background: url() top left no-repeat;}
+				<div class="block  default"></div>
+				<h4>ПО ЦЕНТРУ
+				</h4>
+				.block{background: url() center no-repeat;}
+				<div class="block center"></div>
+				<h4>СЛЕВА</h4>
+				.block{background: url() left no-repeat;}
+
+				<div class="block left"></div>
+				<h4>В УГЛУ
+				</h4>
+
+				.block{background: url() left bottom no-repeat;}
+
+				<div class="block corner"></div>
+				<h4>ПОЗИЦИЯ</h4>
+
+				.block{background: url() 39px 25px no-repeat;}
+
+				<div class="block position__position"></div>
+
+
+
+
+
+
+
+
+			</div>
+			<div class="attachment" id="attachment">
+				<h3><mark>Background-attachment</mark> - устанавливает, будет ли прокручиваться фоновое изображение вместе с
+					содержимым
+					элемента.
+				</h3>
+				<h4>ПО УМОЛЧАНИЮ. ПОЗВОЛЯЕТ ПЕРЕМЕЩАТЬСЯ ФОНУ ВМЕСТЕ С ОКНОМ БРАУЗЕРА
+				</h4>
+				.block{background: url() 0 0 no-repeat scroll;}
+				<div class="block border def-attachment"></div>
+
+				<h4>FIXED. ДЕЛАЕТ ФОНОВОЕ ИЗОБРАЖЕНИЕ ЭЛЕМЕНТА НЕПОДВИЖНЫМ, А ТАК ЖЕ УСТАНАВЛИВАЕТ ФОНОВОЕ ИЗОБРАЖЕНИЕ
+					ОТНОСИТЕЛЬНО ОКНА БРАУЗЕРА
+				</h4>
+				.block{background: url() center repeat fixed}
+				<div class="block border fixed"></div>
+
+				<h4>LOCAL. ФОН ФИКСИРУЕТСЯ С УЧЁТОМ ПОВЕДЕНИЯ ЭЛЕМЕНТА. ЕСЛИ ЭЛЕМЕНТ ИМЕЕТ ПРОКРУТКУ, ТО ФОН БУДЕТ
+					ПРОКРУЧИВАТЬСЯ ВМЕСТЕ С СОДЕРЖИМЫМ, НО ФОН ВЫХОДЯЩИЙ ЗА РАМКИ ЭЛЕМЕНТА ОСТАЁТСЯ НА МЕСТЕ.
+				</h4>
+				.block{background: url() center/cover no-repeat;}
+				<hr>
+				overflow: auto;
+				<hr>
+				max-height: 200px;
+				<div class="block local border">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus placeat id perferendis incidunt
+					minima, perspiciatis expedita veniam tempora molestias blanditiis, beatae delectus quasi culpa quaerat
+					repellendus voluptas sed odit corrupti necessitatibus vitae nihil eos exercitationem. Soluta quas
+					voluptas inventore, optio corporis unde alias officiis ipsum accusantium veniam quod a? Nam
+					perferendis obcaecati, maxime nostrum aliquam temporibus facilis quidem, iusto possimus blanditiis
+					repellat, porro ab ipsum ducimus eaque harum accusantium voluptatibus magni. Corporis explicabo sequi
+					voluptas vitae eum magni
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nihil inventore eligendi error
+					consequatur, ullam quam vitae nostrum tempora aperiam quae aut similique totam quod unde sed animi.
+					Aperiam, error, eaque culpa consequatur, accusamus earum molestiae fugit excepturi labore esse aliquid
+					delectus itaque. Nihil laborum impedit harum nostrum odio sint, nesciunt quae illo, vero atque tenetur.
+					Nisi voluptate tempore unde omnis exercitationem molestias odit veritatis recusandae ea quis? Animi, in
+					labore praesentium fuga nihil cumque dolore quam pariatur ipsam ipsa molestias deleniti placeat autem
+					facere explicabo officiis ratione a, velit ipsum laudantium soluta perspiciatis culpa quaerat facilis.
+					Dolorem, numquam labore. velit, dolores blanditiis voluptate aperiam, nam inventore, harum iure quas?
+				</div>
+
+
+			</div>
+
+			<div class="size" id="size">
+				<h3>Background-size - масштабирует фоновое изображение согласно заданным размерам. в цифрах, где первое
+					значение (проценты, px) определяет ширину, второе - высоту. либо специальным значением.
+				</h3>
+				<h4>ПО УМОЛЧАНИЮ. РАЗМЕРЫ КАРТИНКИ ПО УМОЛЧАНИЮ
+				</h4>
+				.block{background: url() 0 0/ auto auto no-repeat;}
+				<div class="block border__second size__default"></div>
+				<h4>ПО ШИРИНЕ. РАЗМЕРЫ КАРТИНКИ ПО ШИРИНЕ БЛОКА
+				</h4>
+				.block{background: url() 0 0 / 100% auto no-repeat;}
+				<div class="block border__second size__width"></div>
+				<h4></h4>
+				.block{background: url() 0 0 / auto 100% no-repeat;}
+				<div class="block border__second size__height"></div>
+
+				<h4>РАССТЯНУТЬ. РАССТЯГИВАЕМ КАРТИНКУ НА ВСЮ ШИРИНУ И ВЫСОТУ БЛОКА
+				</h4>
+				.block{background:url() 0 0/ 100% 100% no-repeat; }
+				<div class="block border__second size__full"></div>
+				<h4>CONTAIN. МАСШТАБИРУЕТ ИЗОБРАЖЕНИЕ С СОХРАНЕНИЕМ ПРОПОРЦИЙ ТАКИМ ОБРАЗОМ, ЧТОБЫ КАРТИНКА ЦЕЛИКОМ
+					ПОМЕСТИЛАСЬ ВНУТРЬ БЛОКА. ТО ЕСТЬ ПО МЕНЬШЕЙ СТОРОНЕ КАРТИНКИ</h4>
+				.block{background: url() 0 0 / contain no-repeat; }
+				<div class="block border__second contain"></div>
+
+				<h4>COVER. МАСШТАБИРУЕТ ИЗОБРАЖЕНИЕ С СОХРАНЕНИЕМ ПРОПОРЦИЙ ТАК, ЧТОБЫ ЕГО ШИРИНА ИЛИ ВЫСОТА РАВНЯЛАСЬ
+					ШИРИНЕ ИЛИ ВЫСОТЕ БЛОКА. ТО ЕСТЬ ПО БОЛЬШЕЙ СТОРОНЕ КАРТИНКИ
+				</h4>
+				.block{background: url() 0 0 / cover no-repeat; }
+				<div class="block border__second cover"></div>
+				<h4>РАЗМЕРЫ. УСТАНАВЛИВАЕМ КОНКРЕТНЫЕ РАЗМЕРЫ. ЕСЛИ УСТАНОВЛЕНО ОДНО ЗНАЧЕНИЕ, ОНО ЗАДАЕТ ШИРИНУ ФОНА,
+					ВТОРОЕ ЗНАЧЕНИЕ ПРИНИМАЕТСЯ ЗА AUTO. ПРОПОРЦИИ КАРТИНКИ ПРИ ЭТОМ СОХРАНЯЮТСЯ. ИСПОЛЬЗОВАНИЕ ДВУХ ЗНАЧЕНИЙ
+					ЧЕРЕЗ ПРОБЕЛ ЗАДАЕТ ШИРИНУ И ВЫСОТУ ФОНОВОЙ КАРТИНКИ
+				</h4>
+				.block{ background: url() 0 0 / 40px 60px no-repeat;}
+				<div class="block border__second size__size"></div>
+			</div>
+		</main>
+		<footer class="footer">
+			<ul class="list">
+				<li>Короткий список</li>
+				<li>Длииный список Длииный список Длииный список Длииный список Длииный список Длииный список Длииный список
+					Длииный список Длииный список Длииный список Длииный список Длииный список</li>
+				<li>Средний список Средний список Средний список </li>
+				<li>Анекдот: Армянин-программист назвал сына Трафик...</li>
+				<li><span>Мотивация</span> :<mark>Верь только в себя</mark>, и свои силы, удачи мой друг</li>
+			</ul>
+			<a title="перекинет в начало" href="" class="buttom">не нажимай</a>
+		</footer>
+	</div>
+</body>
+
+</html>
